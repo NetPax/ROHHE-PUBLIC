@@ -1,0 +1,29 @@
+.section-headline {
+	color: $gray-light;
+}
+
+.text-upper {
+	color: $black;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.text-border {
+	border-left: 2px solid currentColor;
+	padding-left: 20px;
+}
+
+.text-underscore {
+	margin-bottom: 1.5em;
+	position: relative;
+
+	&::after {
+		background-color: currentColor;
+		content: '';
+		width: 24px;
+		height: 2px;
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+	}
+}

@@ -1,0 +1,27 @@
+.subpage.search {
+
+	h2 {
+
+		span {
+			text-decoration: underline;
+		}
+	}
+
+	.search-results-list {
+		font-size: 1.8rem;
+
+		li {
+
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+
+		a {
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

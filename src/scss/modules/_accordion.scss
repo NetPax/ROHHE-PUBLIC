@@ -1,0 +1,76 @@
+.module.accordion {
+	margin-bottom: 120px;
+
+	.accordion-nav {
+
+		&:first-child {
+
+			.accordion-toggle {
+
+				@include mobile-xs {
+					padding: 0 64px 20px 16px;
+				}
+			}
+		}
+
+		.accordion-toggle {
+			border-bottom: 2px solid $black;
+			color: $brand;
+			display: flex;
+			align-items: center;
+			font-size: 2.8rem;
+			font-weight: 400;
+			padding: 80px 130px 20px 80px;
+			position: relative;
+			width: 100%;
+
+			@include mobile-xs {
+				font-size: 2.4rem;
+				padding: 40px 64px 20px 16px;
+			}
+
+			&.active {
+
+				&::after {
+					bottom: 4px;
+					transform: rotate(135deg);
+
+					@include mobile-xs {
+						bottom: 12px;
+					}
+				}
+			}
+
+			&::after {
+				content: '';
+				width: 36px;
+				height: 36px;
+				border-left: 2px solid $brand;
+				border-bottom: 2px solid $brand;
+				transition: $trans-fast;
+				position: absolute;
+				bottom: 28px;
+				right: 40px;
+				transform: rotate(-45deg);
+
+				@include mobile-xs {
+					width: 24px;
+					height: 24px;
+					bottom: 28px;
+					right: 16px;
+				}
+			}
+		}
+	}
+
+	.accordion-content {
+		background-image: $gradient-default;
+		display: none;
+		padding: 35px 80px 70px;
+
+		@include mobile-xs {
+			padding: 35px 16px 70px;
+		}
+	}
+
+}

@@ -1,0 +1,143 @@
+.products {
+
+	.products-list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 150px;
+		margin-bottom: 150px;
+
+		@include laptop {
+			gap: 75px;
+		}
+
+		@include laptop-mac {
+			gap: 50px;
+			margin-bottom: 75px;
+		}
+
+		@include laptop-middle {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 75px;
+		}
+
+		@include tablet-middle {
+			gap: 64px 32px;
+		}
+
+		@include mobile {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		.product-excerpt {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			min-height: 740px;
+			padding-top: 110px;
+			position: relative;
+			text-align: center;
+
+			@include mobile {
+				min-height: 540px;
+			}
+
+			&:hover {
+
+				&::after {
+					box-shadow: $shadow-fluffy
+				}
+
+				.product-image {
+					transform: scale(1.15);
+				}
+			}
+
+			&::after {
+				background: linear-gradient(135deg, #e3e3e3 0%, #ffffff 100%);
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 490px;
+				transition: $trans-medium;
+				z-index: -1;
+
+				@include mobile-xs {
+					height: 345px;
+				}
+			}
+
+			.product-decor {
+				position: absolute;
+				animation: float 6s ease-in-out infinite;
+
+				&.product-decor-1 {
+					top: 32px;
+					left: 32px;
+				}
+
+				&.product-decor-2 {
+					top: 32px;
+					right: 32px;
+					animation-delay: 1s;
+				}
+
+				&.product-decor-3 {
+					top: 160px;
+					left: 64px;
+					animation-delay: 2s;
+
+					@include mobile-xs {
+						left: 32px;
+					}
+				}
+			}
+
+			.product-name {
+				margin: 0 16px 32px;
+				text-align: center;
+			}
+
+			.product-image {
+				margin-top: auto;
+				margin-bottom: 50px;
+				transition: $trans-medium;
+				width: 80%;
+			}
+
+			.product-short-desc {
+				margin: 0 16px 16px;
+			}
+
+			.product-link {
+				text-transform: uppercase;
+				width: 100%;
+			}
+		}
+	}
+
+	.products-link {
+		width: 100%;
+	}
+
+	.products-message {
+		margin-bottom: 120px;
+	}
+
+	&.products-single {
+
+		.module {
+			margin-bottom: 120px;
+
+			@include mobile-xs {
+				margin-bottom: 60px;
+			}
+		}
+
+		.products-link {
+			margin-bottom: 115px;
+			text-transform: uppercase;
+		}
+	}
+}

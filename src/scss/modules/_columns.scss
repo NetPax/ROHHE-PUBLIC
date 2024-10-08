@@ -1,0 +1,15 @@
+.module.columns {
+
+	.columns-container {
+		display: flex;
+		gap: 32px;
+
+		@include mobile {
+			flex-direction: column;
+		}
+
+		.columns-col {
+			flex: 1;
+		}
+	}
+}

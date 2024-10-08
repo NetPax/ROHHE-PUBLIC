@@ -1,0 +1,305 @@
+.homepage {
+	position: relative;
+	z-index: 2;
+
+	.cta {
+		margin-bottom: 125px;
+
+		@include laptop-mac {
+			margin-bottom: 80px;
+		}
+
+		@include mobile {
+			margin-bottom: 50px;
+		}
+
+		.cta-container {
+			position: relative;
+
+			.swiper-button-prev,
+			.swiper-button-next {
+				margin: 0;
+				width: 31px;
+				height: 58px;
+				top: 50%;
+				transform: none;
+
+				@include mobile-xs {
+					width: 16px;
+					height: 30px;
+				}
+
+				&::after {
+					content: none;
+					display: none;
+				}
+
+				svg {
+
+					@include mobile-xs {
+						width: 16px;
+						height: 30px;
+					}
+				}
+			}
+
+			.swiper-button-prev {
+				left: -61px;
+
+				@include laptop {
+					left: 20px;
+				}
+
+				@include laptop-middle {
+					top: auto;
+					left: 0;
+					bottom: 88px;
+				}
+
+				@include mobile-xs {
+					bottom: 50px;
+				}
+			}
+
+			.swiper-button-next {
+				right: -61px;
+
+				svg {
+					transform: rotate(180deg);
+				}
+
+				@include laptop {
+					right: 20px;
+				}
+
+				@include laptop-middle {
+					top: auto;
+					left: 0;
+					right: auto;
+					bottom: 0;
+				}
+			}
+		}
+	}
+
+	.about {
+		margin-bottom: 125px;
+
+		@include laptop-mac {
+			margin-bottom: 50px;
+		}
+
+		.about-container {
+			display: flex;
+			justify-content: center;
+
+			@include tablet-middle {
+				flex-direction: column;
+			}
+
+			.about-image {
+				display: flex;
+				align-items: center;
+
+				@include tablet-middle {
+					display: none;
+				}
+
+				@include mobile {
+					display: flex;
+					justify-content: center;
+					order: 2;
+				}
+
+				.about-image-img {
+					max-width: 590px;
+				}
+			}
+
+			.about-text {
+				padding-top: 100px;
+
+				@include laptop-middle {
+					padding-top: 0;
+				}
+
+				.section-headline {
+					margin-bottom: 50px;
+
+					@include mobile-xs {
+						margin-bottom: 32px;
+					}
+				}
+
+				.text-content {
+					margin-left: 180px;
+					max-width: 745px;
+
+					@include laptop-mac {
+						margin-left: 0;
+					}
+
+					.text-lead {
+						margin: 0 0 16px 22px;
+					}
+
+					.text-link {
+						margin: 32px 0 0 22px;
+					}
+				}
+			}
+		}
+	}
+
+	.products {
+		margin-bottom: 140px;
+
+		@include laptop-mac {
+			margin-bottom: 50px;
+		}
+
+		.section-headline {
+			margin-bottom: 50px;
+
+			@include mobile {
+				margin-bottom: 32px;
+			}
+		}
+	}
+
+	.reference {
+		margin-bottom: 165px;
+
+		@include laptop-mac {
+			margin-bottom: 100px;
+		}
+
+		.section-headline {
+			margin-bottom: 40px;
+
+			@include mobile-xs {
+				font-size: 4rem;
+			}
+
+			&.section-headline-mobile {
+
+				@media (min-width: 992px) {
+					display: none;
+				}
+			}
+
+			&.section-headline-desktop {
+
+				@include tablet-middle {
+					display: none;
+				}
+			}
+		}
+
+		.reference-container {
+			display: flex;
+			gap: 45px;
+
+			@include tablet-middle {
+				flex-direction: column;
+			}
+
+			.reference-text {
+
+				.text-content {
+					margin-left: 300px;
+
+					@include laptop-1365 {
+						margin-left: 200px;
+					}
+
+					@include tablet-middle {
+						margin-left: 0;
+					}
+
+					.text-lead {
+						margin-bottom: 65px;
+						max-width: 475px;
+
+						@include mobile-xs {
+							margin-bottom: 45px;
+						}
+					}
+				}
+			}
+
+			.reference-images {
+				position: relative;
+
+				@include tablet-middle {
+					display: flex;
+					justify-content: center;
+				}
+
+				.reference-image-bg {
+					position: absolute;
+					top: 100px;
+					left: 0;
+					z-index: 1;
+					animation: float 6s ease-in-out infinite;
+
+					@include tablet-middle {
+						display: none;
+					}
+				}
+
+				.reference-image-main {
+					margin-top: 280px;
+					position: relative;
+					transition: $trans-medium;
+					transform: translateX(40%);
+					z-index: 2;
+
+					@media (min-width: 992px) {
+
+						&:hover {
+							transform: translateX(40%) scale(1.05);
+						}
+					}
+
+					@include tablet-middle {
+						margin-top: 0;
+						transform: translateX(0);
+						width: fit-content;
+						animation: float 6s ease-in-out infinite;
+					}
+
+					&::after {
+						border: 1px solid $brand;
+						content: '';
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: -20px;
+						left: 20px;
+						animation: float 6s ease-in-out infinite;
+
+						@include tablet-middle {
+							display: none;
+						}
+					}
+
+					.reference-image-main-img {
+
+						@include tablet-middle {
+							border: 1px solid $brand;
+						}
+					}
+
+					p {
+						margin-left: 20px;
+
+						@include tablet-middle {
+							margin: 10px 0 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

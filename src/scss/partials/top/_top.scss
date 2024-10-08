@@ -1,0 +1,35 @@
+.top {
+
+    .top-content {
+        margin-left: calc(15% + 75px);
+        margin-right: 32px;
+        max-width: 626px;
+        padding-bottom: 32px;
+
+        @include mobile-xs {
+            margin-left: calc(15% + 32px);
+        }
+
+        .top-text {
+
+            @include mobile-xs {
+                font-size: 1.2rem;
+            }
+        }
+
+        .top-link {
+            margin: 32px 0 0 22px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+}

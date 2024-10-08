@@ -1,0 +1,35 @@
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.anim-slide-top {
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+.anim-slide-bottom {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.anim-slide-left {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.anim-slide-right {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.anim-fade-in {
+    opacity: 0;
+}

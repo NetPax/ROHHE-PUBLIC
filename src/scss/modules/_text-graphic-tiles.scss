@@ -1,0 +1,43 @@
+.module.text-graphic-tiles {
+	background-image: $gradient-default;
+	padding: 64px 0;
+
+	@include mobile-xs {
+		padding: 32px 0;
+	}
+
+	.text-graphic-tiles-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 64px;
+
+		.text-graphic-tiles-graphic {
+			grid-column: 1 / 2;
+
+			@include mobile {
+				grid-column: 1 / 4;
+				justify-self: center;
+				order: 2;
+			}
+		}
+
+		.text-graphic-tiles-text {
+			grid-column: 2 / 4;
+
+			@include mobile {
+				grid-column: 1 / 4;
+			}
+
+			.tiles-graphics-list {
+				margin-top: 64px;
+
+				li {
+
+					div {
+						padding: 16px;
+					}
+				}
+			}
+		}
+	}
+}

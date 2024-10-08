@@ -1,0 +1,182 @@
+.subpage.contact {
+	padding-bottom: 180px;
+
+	@include laptop-mac {
+		padding-bottom: 120px;
+	}
+
+	@include mobile-xs {
+		padding-bottom: 80px;
+	}
+
+	.contact-data {
+
+		h2 {
+			color: $gray-light;
+			margin-bottom: 80px;
+
+			@include laptop-mac {
+				margin-bottom: 60px;
+			}
+
+			@include mobile-xs {
+				margin-bottom: 32px;
+			}
+		}
+
+		.contact-data-nav {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			gap: 16px;
+			margin-top: 170px;
+			margin-bottom: 80px;
+
+			@include laptop-mac {
+				margin-top: 130px;
+				margin-bottom: 60px;
+			}
+
+			@include laptop-middle {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			@include mobile {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include mobile-xs {
+				margin-top: 0;
+				margin-bottom: 32px;
+			}
+
+			li {
+
+				button {
+					width: 100%;
+					height: 100%;
+
+					&.select {
+						background-color: $brand;
+						color: $white;
+					}
+				}
+			}
+		}
+
+		.contact-data-wrap {
+			display: flex;
+			justify-content: space-between;
+			padding-left: 15%;
+
+			@include laptop-middle {
+				padding-left: 0;
+			}
+
+			@include mobile {
+				flex-direction: column;
+				gap: 32px;
+			}
+
+			.contact-data-addresses {
+				flex: 1;
+
+				li {
+					border-left: 2px solid $brand;
+					padding-left: 20px;
+
+					&:not(:first-child) {
+						display: none;
+					}
+
+					p {
+						font-size: 2rem;
+						font-weight: 500;
+					}
+
+					.contact-picture {
+						display: block;
+						margin: 0 auto;
+						max-width: 75%;
+					}
+				}
+			}
+
+			.contact-data-form {
+				flex: 1;
+
+				.form {
+					display: flex;
+					flex-direction: column;
+					gap: 24px;
+
+					.form-field-group {
+						display: flex;
+						flex-direction: column;
+
+						label {
+							cursor: pointer;
+							font-weight: 500;
+						}
+
+						input, textarea {
+
+							&:focus-visible {
+								outline: none;
+							}
+						}
+
+						input[type=checkbox] {
+							border: 1px solid $brand;
+							cursor: pointer;
+							width: 20px;
+							min-width: 20px;
+							height: 20px;
+							transition: $trans-fast;
+
+							&:checked {
+								background-color: $brand;
+							}
+						}
+
+						&.form-field-group-text {
+
+							label {
+								text-transform: uppercase;
+							}
+
+							input, textarea {
+								border-bottom: 2px solid $brand;
+								padding: 10px 10px 10px 0;
+								width: 100%;
+							}
+						}
+
+						&.form-field-group-checkbox {
+							flex-direction: row;
+							align-items: center;
+							gap: 10px;
+						}
+
+						.form-send {
+							margin-top: 80px;
+
+							@include mobile {
+								margin-top: 40px;
+							}
+						}
+
+						.ajax-info {
+							font-weight: 700;
+							margin-top: 16px;
+							text-align: center;
+
+							.loader {
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.social-links {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+
+	@include laptop-mac {
+		gap: 32px;
+	}
+
+	@include mobile-xs {
+		gap: 16px;
+	}
+
+	li {
+
+		a {
+			display: flex;
+
+			&:hover {
+
+				img {
+					transform: scale(1.25);
+				}
+			}
+
+			img {
+				transition: $trans-fast;
+			}
+		}
+	}
+}

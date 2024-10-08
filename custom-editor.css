@@ -1,0 +1,13 @@
+.text-underscore {
+	position: relative;
+
+	&::after {
+		background-color: currentColor;
+		content: '';
+		width: 24px;
+		height: 2px;
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+	}
+}

@@ -1,0 +1,20 @@
+.top {
+
+	&.top-type-map {
+
+		.subpage & {
+
+			.top-wrapper {
+				min-height: 694px;
+
+				@include laptop-mac {
+					min-height: 544px;
+				}
+
+				@include mobile-xs {
+					min-height: 440px;
+				}
+			}
+		}
+	}
+}

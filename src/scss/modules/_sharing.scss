@@ -1,0 +1,73 @@
+#share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    opacity: 0;
+    transition: 1s ease-in-out;
+
+    &:before {
+        content: attr(data-pre);
+        color: $brand;
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+    }
+
+    .jssocials-share {
+        color: #fff;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: $trans-medium;
+        cursor: pointer;
+        //font-size: 1.15rem;
+
+        svg, img {
+            height: 2rem;
+            path {
+                fill: $white;
+            }
+        }
+
+        &.jssocials-share-twitter {
+            background-color: #00a8d3;
+
+            &:hover {
+                background-color: darken(#00a8d3, 5%);
+            }
+        }
+
+        &.jssocials-share-facebook {
+            background-color: #32599b;
+
+            &:hover {
+                background-color: darken(#32599b, 5%);
+            }
+        }
+
+        &.jssocials-share-linkedin {
+            background-color: #07ab;
+
+            &:hover {
+                background-color: darken(#0077ab, 5%);
+            }
+        }
+    }
+
+    .jssocials-shares {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .jssocials-share {
+        margin: 0 0 0 16px;
+    }
+}

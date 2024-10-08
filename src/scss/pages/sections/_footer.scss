@@ -1,0 +1,126 @@
+footer.footer {
+	background-image: url('../img/footer-bg.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow-y: hidden;
+	padding: 70px 0 98px;
+
+	.footer-main {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 64px;
+		margin-bottom: 40px;
+
+		@include laptop-middle {
+			gap: 32px;
+		}
+
+		.footer-company-info {
+			font-size: 1.5rem;
+
+			@include laptop-middle {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+		}
+
+		.footer-menu {
+			flex: 1;
+
+			.footer-main-menu {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				gap: 64px;
+				width: 100%;
+
+				@include laptop-mac {
+					gap: 32px;
+				}
+
+				a {
+					color: $text-color;
+					text-transform: uppercase;
+					transition: $trans-fast;
+
+					&:hover {
+						color: $brand;
+					}
+				}
+
+				> li {
+					flex: 1;
+
+					@include laptop-middle {
+						flex: 0 0 calc(50% - 16px);
+						max-width: calc(50% - 16px);
+					}
+
+					@include mobile-xs {
+						flex: 0 0 100%;
+						max-width: 100%;
+					}
+
+					> a {
+						display: inline-block;
+						font-size: 1.5rem;
+						font-weight: 700;
+						margin-bottom: 24px;
+						padding-left: 20px;
+					}
+
+					> .submenu {
+						border-left: 2px solid $brand;
+						padding-left: 20px;
+
+						> li {
+
+							> a {
+								font-weight: 500;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer-misc {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+
+		@include tablet-middle {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.footer-legal-note {
+			color: $brand;
+			font-weight: 500;
+		}
+
+		.footer-legal-links {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+
+			a {
+				font-weight: 500;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.social-links {
+			margin-left: auto;
+
+			@include mobile-xs {
+				margin-left: 0;
+			}
+		}
+	}
+}

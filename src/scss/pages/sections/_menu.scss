@@ -1,0 +1,147 @@
+.site-main-menu {
+
+	@include tablet-and-greater {
+		display: block!important;
+	}
+
+	@include mobile {
+		display: none;
+		box-shadow: $shadow;
+		background-color: $white;
+		padding: 32px 16px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		z-index: 1000;
+	}
+
+	ul.header-main-menu {
+		display: flex;
+		align-items: center;
+		gap: 120px;
+
+		@include laptop-mac {
+			gap: 60px;
+		}
+
+		@include tablet-middle {
+			gap: 16px;
+		}
+
+		@include mobile {
+			flex-direction: column;
+		}
+
+		a {
+			color: $text-color;
+			display: block;
+			font-size: 15px;
+			font-weight: 700;
+			text-align: center;
+			transition: $trans-fast;
+			width: fit-content;
+
+			@include tablet-middle {
+				font-size: 12px;
+			}
+
+			@include mobile {
+				font-size: 15px;
+			}
+
+			&:hover {
+                color: $brand;
+			}
+		}
+
+		li.current-menu-item {
+
+			> a {
+				color: $brand;
+			}
+		}
+
+		> li {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&.menu-item-has-children {
+				position: relative;
+
+				@include mobile {
+					width: 100%;
+				}
+
+				&.current-menu-parent {
+
+					> a {
+						color: $brand;
+					}
+				}
+
+				> a {
+					padding-right: 30px;
+					position: relative;
+
+					&.active {
+						color: $brand;
+
+						&::after {
+							transform: translateY(-50%) rotate(135deg);
+							margin-top: 4px;
+						}
+					}
+
+					&::after {
+						border-left: 2px solid $black;
+						border-bottom: 2px solid $black;
+						content: '';
+						width: 12px;
+						height: 12px;
+						position: absolute;
+						top: 50%;
+						right: 0;
+						transform: translateY(-50%) rotate(-45deg);
+						transition: $trans-fast;
+						margin-top: -4px;
+					}
+				}
+
+				> ul.submenu {
+					background-color: $white;
+					box-shadow: $shadow;
+					padding: 16px;
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					width: 300px;
+					transform: translateX(-50%);
+
+					@include mobile {
+						position: static;
+						transform: none;
+						width: 100%;
+					}
+
+					> li {
+						display: flex;
+						justify-content: center;
+
+						&:not(:last-child) {
+							margin-bottom: 16px;
+						}
+					}
+				}
+			}
+		}
+
+		& > li {
+
+			ul[data-level] {
+				display: none;
+			}
+		}
+	}
+}

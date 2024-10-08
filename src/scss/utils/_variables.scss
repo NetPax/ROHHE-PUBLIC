@@ -1,0 +1,51 @@
+/* COLORS */
+$contrast: yellow;
+$black: #000000;
+$white: #ffffff;
+
+$gray-lighter: #f7f7f7;
+$gray-light: #d7d7d7;
+$gray: #cccccc;
+$gray-dark: #666666;
+$gray-bg: #ececec;
+$almost-black: #333333;
+$some-gray: #707070;
+
+$red: #9A0C19;
+$green: #22C55E;
+$blue: #2563EB;
+$yellow: #EAB308;
+
+$brand: $red;
+$brand-dark: darken($brand, 8%);
+$text-color: $black;
+
+/* TRANSITIONS */
+
+$trans-fast: all .25s ease-in-out;
+$trans-medium: all .5s ease-in-out;
+$trans-slow: all .75s ease-in-out;
+
+/* SHADOWS */
+
+$shadow: 0px 6px 12px 0px rgba($black, .1);
+$shadow-focus: 0px 3px 6px 0px rgba($brand, .25);
+$shadow-fluffy: rgba($black, 0.1) 0px 60px 40px -8px;
+
+/* GRADIENTS */
+
+$gradient-default: linear-gradient(to right, #ffffff 0%,#f2f2f2 100%);
+$gradient-default-reverse: linear-gradient(to right, #f2f2f2 0%,#ffffff 100%);
+$gradient-diag: linear-gradient(135deg, #efefef 0%, #ffffff 100%);
+$gradient-diag-reverse: linear-gradient(45deg, #e0e0e0 0%, #ffffff 100%);
+
+/* FOCUS */
+
+@mixin focus-outline {
+	outline: 2px dashed $brand;
+	outline-offset: 4px;
+}
+
+/* FONTS */
+
+$font-family: 'Montserrat';

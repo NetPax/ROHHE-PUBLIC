@@ -1,0 +1,42 @@
+.module.text-graphic {
+	background-image: $gradient-default-reverse;
+	margin-bottom: 120px!important;
+	padding: 64px 0;
+
+	@include mobile-xs {
+		padding-top: 32px;
+	}
+
+	.text-graphic-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 64px;
+
+		@include mobile {
+			gap: 32px;
+		}
+
+		.text-graphic-text {
+			grid-column: 1 / 2;
+
+			@include tablet-middle {
+				grid-column: 1 / 4;
+			}
+		}
+
+		.text-graphic-graphic {
+			grid-column: 2 / 4;
+			align-self: flex-end;
+			margin-bottom: -124px;
+
+			@include laptop-middle {
+				align-self: flex-start;
+			}
+
+			@include tablet-middle {
+				grid-column: 1 / 4;
+				justify-self: center;
+			}
+		}
+	}
+}

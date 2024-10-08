@@ -1,0 +1,150 @@
+.module.texts-graphic-border {
+	margin-bottom: 240px;
+
+	@include laptop-middle {
+		margin-bottom: 120px;
+	}
+
+	@include mobile {
+		margin-bottom: 90px;
+	}
+
+	&.texts-side-right {
+
+		.texts-graphic-border-container {
+
+			.texts {
+				order: 1;
+
+				@include mobile {
+					order: 0;
+				}
+
+				.texts-label-vertical {
+					left: 0;
+					transform: rotate(-90deg) translateX(-60px) translateY(0);
+				}
+			}
+
+			.graphics {
+
+				.graphic-main {
+					left: auto;
+					right: 10%;
+				}
+			}
+		}
+	}
+
+	.texts-graphic-border-container {
+		display: flex;
+		gap: 72px;
+
+		@include laptop-middle {
+			gap: 36px;
+		}
+
+		@include mobile {
+			flex-direction: column;
+		}
+
+		.texts {
+			flex: 0 0 calc(50% - 36px);
+			max-width: calc(50% - 36px);
+			position: relative;
+			z-index: 10;
+
+			@include laptop-middle {
+				flex: 0 0 calc(50% - 18px);
+				max-width: calc(50% - 18px);
+			}
+
+			@include mobile {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+
+			.texts-caption {
+				color: $brand;
+				font-weight: 700;
+				margin-top: 60px;
+
+				@include laptop-middle {
+					margin-top: 30px;
+				}
+
+				@include mobile {
+					margin-top: 0;
+				}
+			}
+
+			.texts-headline {
+				margin-bottom: 30px;
+
+				@include laptop-1365 {
+					font-size: 4.8rem;
+				}
+			}
+
+			.texts-text {
+				font-weight: 500;
+				max-width: 500px;
+				padding-left: 60px;
+
+				@include laptop-1365 {
+					padding-left: 0;
+				}
+
+				@include mobile {
+					max-width: none;
+				}
+			}
+
+			.texts-label-vertical {
+				color: $white;
+				font-size: 12rem;
+				line-height: 1;
+				font-weight: 700;
+				position: absolute;
+				left: 100%;
+				transform: rotate(-90deg) translateX(120px) translateY(-60px);
+				transform-origin: top left;
+				text-shadow: 0px 0px 2px $some-gray;
+				z-index: -1;
+
+				@include laptop-mac {
+					font-size: 9rem;
+				}
+
+				@include mobile {
+					display: none;
+				}
+
+				@include mobile-xs {
+					font-size: 4.8rem;
+				}
+			}
+		}
+
+		.graphics {
+			border: 2px solid $brand;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 0 0 calc(50% - 36px);
+			max-width: calc(50% - 36px);
+			height: fit-content;
+			animation: float 6s ease-in-out infinite;
+
+			@include laptop-middle {
+				flex: 0 0 calc(50% - 18px);
+				max-width: calc(50% - 18px);
+			}
+
+			@include mobile {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+		}
+	}
+}

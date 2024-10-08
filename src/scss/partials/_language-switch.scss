@@ -1,0 +1,53 @@
+.language-switch {
+	position: relative;
+	text-transform: uppercase;
+
+	.lang-toggle {
+		background-color: $white;
+		border: 1px solid $brand;
+		color: $brand;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 15px;
+		font-weight: 700;
+		width: 40px;
+		height: 40px;
+		transition: $trans-fast;
+
+		&:hover {
+			background-color: $brand;
+			color: $white;
+		}
+	}
+
+	.lang-list {
+		background-color: $white;
+		box-shadow: $shadow;
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+
+		li {
+
+			a {
+				color: $text-color;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 15px;
+				width: 40px;
+				height: 40px;
+				transition: $trans-fast;
+
+				&:hover {
+					background-color: $brand;
+					color: $white;
+				}
+			}
+		}
+	}
+}

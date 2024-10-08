@@ -1,0 +1,35 @@
+.top {
+
+	&.top-type-news-single {
+
+		.subpage & {
+			margin-bottom: 50px;
+		}
+
+		.top-wrapper {
+
+			.top-image {
+				margin-left: 15%;
+				margin-bottom: -120px;
+				width: 85%;
+
+				@include laptop-mac {
+					margin-bottom: -90px;
+				}
+
+				@include mobile-xs {
+					margin-bottom: -48px;
+				}
+			}
+
+			.top-headline {
+				margin-bottom: 0;
+				width: 50%;
+
+				@include mobile-xs {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

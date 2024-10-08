@@ -1,0 +1,24 @@
+.subpage {
+
+	.modules {
+	}
+	
+	.module {
+		margin-bottom: 60px;
+
+		@include mobile-xs {
+			margin-bottom: 30px;
+		}
+	}
+
+    &.error-404 {
+
+	    .top {
+
+		    .top-wrapper {
+			    padding-bottom: 32px;
+		    }
+	    }
+    }
+
+}

@@ -1,0 +1,26 @@
+.module.product-documents {
+
+	.products.products-single & {
+		margin-bottom: 0;
+	}
+
+	.product-documents-container {
+
+		.documents-list {
+			gap: 0 16px;
+
+			.document-excerpt {
+				margin: 0 auto 120px;
+				max-width: 235px;
+
+				@include mobile {
+					margin-bottom: 60px;
+				}
+
+				@include mobile-xs {
+					max-width: none;
+				}
+			}
+		}
+	}
+}
